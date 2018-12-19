@@ -2,6 +2,8 @@ using NUnit.Framework;
 
 namespace Kata.Tests
 {
+    using Kata.Library;
+
     public class KataTests
     {
         [SetUp]
