@@ -1,8 +1,17 @@
-# Katas
-This repo is a sandbox area for coding challenges. This allows me to keep my hands on code when I’m bored and have some spare time.
+# Instructtions
 
-Coding challenges are from [Code Wars](codewars.com)
+Being a bald man myself, I know the feeling of needing to keep it clean shaven. Nothing worse that a stray hair waving in the wind.
 
-The master branch is a harness for working on the challenges. Each challenge will be in a seperate branch.
+You will be given a string(x). Clean shaved head is shown as "-" and stray hairs are shown as "/". Your task is to check the head for stray hairs and get rid of them.
 
-This is for personal use and messing around. 
+You should return the original string, but with any stray hairs removed. Keep count of them though, as there is a second element you need to return:
+
+0 hairs --> "Clean!"
+1 hair --> "Unicorn!"
+2 hairs --> "Homer!"
+3-5 hairs --> "Careless!"
+>5 hairs --> "Hobo!"
+
+So for this head: "------/------" you should return:
+
+["-------------", "Unicorn!"]

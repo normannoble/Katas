@@ -2,6 +2,8 @@ using NUnit.Framework;
 
 namespace Kata.Tests
 {
+    using Kata.Library;
+ 
     public class KataTests
     {
         [SetUp]
@@ -10,9 +12,11 @@ namespace Kata.Tests
         }
 
         [Test]
-        public void Test1()
+        public void BasicTests()
         {
-            Assert.Pass();
+            Assert.AreEqual(new string[] { "----------", "Unicorn!" }, Kata.Bald("/---------"));
+            Assert.AreEqual(new string[] { "--------", "Homer!" }, Kata.Bald("/-----/-"));
+            Assert.AreEqual(new string[] { "---------------", "Careless!" }, Kata.Bald("--/--/---/-/---"));
         }
     }
 }
