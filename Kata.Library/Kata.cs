@@ -2,7 +2,7 @@
 
 namespace Kata.Library
 {
-    public class Katas
+    public class Kata
     {
     }
 }
