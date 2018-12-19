@@ -8,23 +8,12 @@ namespace Kata.Library
     {
         public static string[] Bald(string x)
         {
-            var hairs = new Dictionary<int,string>()
-            {
-                {0,"Clean!"},
-                {1,"Unicorn!"},
-                {2,"Homer!"},
-                {3,"Careless!"},
-                {4,"Careless!"},
-                {5,"Careless!"}
-            };
-
-            string hairDescription = "Hobo!"; 
-            hairs.TryGetValue(key: x.Count(f => f == '/'), value: out hairDescription);
-
-            if (hairDescription==null)
-            {
-                hairDescription = "Hobo!";
-            }
+            var hairCount = x.Count(y => y == '/');
+            var hairDescription = (hairCount > 5) ? "Hobo!" : 
+                (hairCount >= 3 && hairCount <= 5) ? "Careless!" : 
+                (hairCount == 2) ? "Homer!" : 
+                (hairCount == 1) ? "Unicorn!" : 
+                "Clean!";
 
             return new string[]{ x.Replace("/", "-"), hairDescription };
         }
