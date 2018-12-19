@@ -17,6 +17,7 @@ namespace Kata.Tests
             Assert.AreEqual(new string[] { "----------", "Unicorn!" }, Kata.Bald("/---------"));
             Assert.AreEqual(new string[] { "--------", "Homer!" }, Kata.Bald("/-----/-"));
             Assert.AreEqual(new string[] { "---------------", "Careless!" }, Kata.Bald("--/--/---/-/---"));
+            Assert.AreEqual(new string[] { "------------------", "Hobo!" }, Kata.Bald("--/--/---/-/---///"));
         }
     }
 }
