@@ -1,8 +1,8 @@
-# Katas
-This repo is a sandbox area for coding challenges. This allows me to keep my hands on code when I’m bored and have some spare time.
+# Instructions
+Write a function that takes an array of numbers (integers for the tests) and a target number. It should find two different items in the array that, when added together, give the target value. The indices of these items should then be returned in an array like so: [index1, index2].
 
-Coding challenges are from [Code Wars](codewars.com)
+For the purposes of this kata, some tests may have multiple answers; any valid solutions will be accepted.
 
-The master branch is a harness for working on the challenges. Each challenge will be in a seperate branch.
+The input will always be valid (numbers will be an array of length 2 or greater, and all of the items will be numbers; target will always be the sum of two different items from that array).
 
-This is for personal use and messing around. 
+Based on: http://oj.leetcode.com/problems/two-sum/
