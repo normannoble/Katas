@@ -1,8 +1,22 @@
-# Katas
-This repo is a sandbox area for coding challenges. This allows me to keep my hands on code when I’m bored and have some spare time.
+# Instructions
+Write a function that takes a string of braces, and determines if the order of the braces is valid. It should return true if the string is valid, and false if it's invalid.
 
-Coding challenges are from [Code Wars](codewars.com)
+This Kata is similar to the Valid Parentheses Kata, but introduces new characters: brackets [], and curly braces {}. Thanks to @arnedag for the idea!
 
-The master branch is a harness for working on the challenges. Each challenge will be in a seperate branch.
+All input strings will be nonempty, and will only consist of parentheses, brackets and curly braces: ()[]{}.
 
-This is for personal use and messing around. 
+What is considered Valid?
+
+A string of braces is considered valid if all braces are matched with the correct brace.
+
+Examples
+
+"(){}[]"   =>  True
+
+"([{}])"   =>  True
+
+"(}"       =>  False
+
+"[(])"     =>  False
+
+"[({})](]" =>  False

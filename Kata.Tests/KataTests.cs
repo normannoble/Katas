@@ -12,9 +12,34 @@ namespace Kata.Tests
         }
 
         [Test]
-        public void Test1()
+        public void ValidBraces_WithValidPatterns_ReturnsTrue()
         {
-            Assert.Pass();
+            Assert.AreEqual(true, Kata.ValidBraces("()"));
+            Assert.AreEqual(true, Kata.ValidBraces("()[]{}"));
+            Assert.AreEqual(true, Kata.ValidBraces("({[]})"));
+            Assert.AreEqual(true, Kata.ValidBraces("({[]})()"));
+            Assert.AreEqual(true, Kata.ValidBraces("()({[]})"));
+            Assert.AreEqual(true, Kata.ValidBraces("{{}{}}"));
+            Assert.AreEqual(true, Kata.ValidBraces("{}{{}}"));
+            Assert.AreEqual(true, Kata.ValidBraces("{{}}{}"));
+            Assert.AreEqual(true, Kata.ValidBraces("[{{[(){}]}}[]{}{{(())}}]"));
+        }
+        [Test]
+        public void ValidBraces_WithInvalidPatterns_ReturnsFalse()
+        {
+            Assert.AreEqual(false, Kata.ValidBraces(""));
+            Assert.AreEqual(false, Kata.ValidBraces("("));
+            Assert.AreEqual(false, Kata.ValidBraces(")"));
+            Assert.AreEqual(false, Kata.ValidBraces("))"));
+             Assert.AreEqual(false, Kata.ValidBraces(")))"));
+            Assert.AreEqual(false, Kata.ValidBraces("[[["));
+            Assert.AreEqual(false, Kata.ValidBraces("[[[["));
+            Assert.AreEqual(false, Kata.ValidBraces("[(])"));
+            Assert.AreEqual(false, Kata.ValidBraces("]()"));
+            Assert.AreEqual(false, Kata.ValidBraces("[(])"));
+            Assert.AreEqual(false, Kata.ValidBraces("}()}"));
+            Assert.AreEqual(false, Kata.ValidBraces("({[]}("));
+            Assert.AreEqual(false, Kata.ValidBraces("({[)}]"));
         }
     }
 }
