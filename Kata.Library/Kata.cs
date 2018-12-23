@@ -6,6 +6,13 @@ namespace Kata.Library
     {
         public static int[] TwoSum(int[] numbers, int target)
         {
+
+            foreach (var item in numbers)
+            {
+                
+            }
+
+
             return new int[0];
         }
     }
